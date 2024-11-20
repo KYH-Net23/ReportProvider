@@ -1,6 +1,7 @@
 ﻿using ReportProvider.Data;
 using ReportProvider.Models;
 using Microsoft.EntityFrameworkCore;
+using ReportProvider.DTO;
 
 namespace ReportProvider.Services
 {
@@ -28,11 +29,30 @@ namespace ReportProvider.Services
                 .SumAsync(od => od.Quantity * od.Price);
         }
 
-        public async Task<IEnumerable<Product>> GetLowStockProductsAsync(int threshold)
+        public async Task<IEnumerable<Product>> GetLowStockProductsAsync()
         {
             return await _context.Products
-                .Where(p => p.Stock <= threshold)
+                .Where(p => p.Stock <= 100)
                 .ToListAsync();
+        }
+        public async Task<List<CustomerPurchaseStatisticsDto>> GetCustomerPurchaseStatisticsAsync()
+        {
+            var statistics = await _context.Users
+                .Select(user => new CustomerPurchaseStatisticsDto
+                {
+                    UserId = user.Id,
+                    UserName = user.Name,
+                    TotalOrders = user.Orders.Count,
+                    TotalSpent = user.Orders
+                        .SelectMany(order => order.OrderDetails)
+                        .Sum(detail => detail.Quantity * detail.Price),
+                    TotalProductsPurchased = user.Orders
+                        .SelectMany(order => order.OrderDetails)
+                        .Sum(detail => detail.Quantity)
+                })
+                .ToListAsync();
+
+            return statistics;
         }
     }
 }

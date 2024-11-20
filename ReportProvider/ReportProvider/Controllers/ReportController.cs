@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReportProvider.DTO;
 using ReportProvider.Services;
 
 namespace ReportProvider.Controllers
@@ -29,10 +30,16 @@ namespace ReportProvider.Controllers
         }
 
         [HttpGet("low-stock-products")]
-        public async Task<IActionResult> GetLowStockProducts(int threshold)
+        public async Task<IActionResult> GetLowStockProducts()
         {
-            var products = await _reportService.GetLowStockProducts(threshold);
+            var products = await _reportService.GetLowStockProducts();
             return Ok(products);
+        }
+        [HttpGet("customer-purchase-statistics")]
+        public async Task<ActionResult<List<CustomerPurchaseStatisticsDto>>> GetCustomerPurchaseStatistics()
+        {
+            var statistics = await _reportService.GetCustomerPurchaseStatisticsAsync();
+            return Ok(statistics);
         }
     }
 }

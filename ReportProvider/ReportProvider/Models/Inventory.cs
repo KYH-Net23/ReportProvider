@@ -1,4 +1,6 @@
-﻿namespace ReportProvider.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+namespace ReportProvider.Models
 {
     public class Inventory
     {

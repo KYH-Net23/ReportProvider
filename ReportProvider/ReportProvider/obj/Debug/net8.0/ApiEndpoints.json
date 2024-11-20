@@ -1,18 +1,32 @@
 [
   {
     "ContainingType": "ReportProvider.Controllers.ReportController",
+    "Method": "GetCustomerPurchaseStatistics",
+    "RelativePath": "api/Report/customer-purchase-statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ReportProvider.DTO.CustomerPurchaseStatisticsDto, ReportProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ReportProvider.Controllers.ReportController",
     "Method": "GetLowStockProducts",
     "RelativePath": "api/Report/low-stock-products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "threshold",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

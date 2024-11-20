@@ -1,4 +1,5 @@
-﻿using ReportProvider.Models;
+﻿using ReportProvider.DTO;
+using ReportProvider.Models;
 
 namespace ReportProvider.Services
 {
@@ -21,9 +22,13 @@ namespace ReportProvider.Services
             return _reportRepository.GetTotalRevenueAsync();
         }
 
-        public Task<IEnumerable<Product>> GetLowStockProducts(int threshold)
+        public Task<IEnumerable<Product>> GetLowStockProducts()
         {
-            return _reportRepository.GetLowStockProductsAsync(threshold);
+            return _reportRepository.GetLowStockProductsAsync();
+        }
+        public Task<List<CustomerPurchaseStatisticsDto>> GetCustomerPurchaseStatisticsAsync()
+        {
+            return _reportRepository.GetCustomerPurchaseStatisticsAsync();
         }
     }
 }
