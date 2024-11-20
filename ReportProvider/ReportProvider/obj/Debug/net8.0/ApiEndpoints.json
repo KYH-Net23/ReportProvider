@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "ReportProvider.Controllers.ReportController",
+    "Method": "GetLowStockProducts",
+    "RelativePath": "api/Report/low-stock-products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "threshold",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportProvider.Controllers.ReportController",
+    "Method": "GetMostSoldProducts",
+    "RelativePath": "api/Report/most-sold-products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportProvider.Controllers.ReportController",
+    "Method": "GetTotalRevenue",
+    "RelativePath": "api/Report/total-revenue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "IU+mzQzEmG8iqljeUI0EiluP9QqpkOY7vIGzY7FZJDM=",
+  "Hash": "9+Z1XjcvZwZ0b1qNFjTBrWAvVQXl9+v4qqYwfzg9h9I=",
   "Source": "ReportProvider",
   "BasePath": "_content/ReportProvider",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

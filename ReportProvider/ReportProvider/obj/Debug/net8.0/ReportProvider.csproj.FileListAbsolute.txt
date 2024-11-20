@@ -166,3 +166,8 @@ C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\ob
 C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\ReportProvider.pdb
 C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\ReportProvider.genruntimeconfig.cache
 C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\ref\ReportProvider.dll
+C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\bin\Debug\net8.0\ReportProvider.staticwebassets.endpoints.json
+C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\ReportProvider.sourcelink.json
+C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\staticwebassets\msbuild.ReportProvider.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Kicker\Documents\GitHub\ReportProvider\ReportProvider\ReportProvider\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

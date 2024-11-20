@@ -11,14 +11,14 @@ namespace ReportProvider.Services
             _reportRepository = reportRepository;
         }
 
-        public Task<IEnumerable<Product>> GetMostSoldProducts(DateTime startDate, DateTime endDate)
+        public Task<IEnumerable<Product>> GetMostSoldProducts()
         {
-            return _reportRepository.GetMostSoldProductsAsync(startDate, endDate);
+            return _reportRepository.GetMostSoldProductsAsync();
         }
 
-        public Task<decimal> GetTotalRevenue(DateTime startDate, DateTime endDate)
+        public Task<decimal> GetTotalRevenue()
         {
-            return _reportRepository.GetTotalRevenueAsync(startDate, endDate);
+            return _reportRepository.GetTotalRevenueAsync();
         }
 
         public Task<IEnumerable<Product>> GetLowStockProducts(int threshold)

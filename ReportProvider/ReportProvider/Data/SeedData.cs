@@ -41,11 +41,11 @@ namespace ReportProvider.Data
             if (!context.Orders.Any())
             {
                 context.Orders.AddRange(
-                    new Order { UserId = 1, OrderDate = DateTime.Now.AddDays(-30) },
-                    new Order { UserId = 2, OrderDate = DateTime.Now.AddDays(-25) },
-                    new Order { UserId = 3, OrderDate = DateTime.Now.AddDays(-15) },
-                    new Order { UserId = 4, OrderDate = DateTime.Now.AddDays(-10) },
-                    new Order { UserId = 5, OrderDate = DateTime.Now.AddDays(-5) }
+                    new Order { UserId = 6, OrderDate = DateTime.Now.AddDays(-30) },
+                    new Order { UserId = 7, OrderDate = DateTime.Now.AddDays(-25) },
+                    new Order { UserId = 8, OrderDate = DateTime.Now.AddDays(-15) },
+                    new Order { UserId = 9, OrderDate = DateTime.Now.AddDays(-10) },
+                    new Order { UserId = 10, OrderDate = DateTime.Now.AddDays(-5) }
                 );
                 context.SaveChanges(); // Save Orders after Users and Products
             }
@@ -54,12 +54,12 @@ namespace ReportProvider.Data
             if (!context.OrderDetails.Any())
             {
                 context.OrderDetails.AddRange(
-                    new OrderDetail { OrderId = 1, ProductId = 1, Quantity = 2, Price = 1200.99m },
-                    new OrderDetail { OrderId = 1, ProductId = 2, Quantity = 1, Price = 699.99m },
-                    new OrderDetail { OrderId = 2, ProductId = 3, Quantity = 3, Price = 49.99m },
-                    new OrderDetail { OrderId = 3, ProductId = 4, Quantity = 5, Price = 25.99m },
-                    new OrderDetail { OrderId = 4, ProductId = 5, Quantity = 2, Price = 15.99m },
-                    new OrderDetail { OrderId = 5, ProductId = 6, Quantity = 1, Price = 189.99m }
+                    new OrderDetail { OrderId = 5, ProductId = 7, Quantity = 2, Price = 1200.99m },
+                    new OrderDetail { OrderId = 6, ProductId = 7, Quantity = 1, Price = 699.99m },
+                    new OrderDetail { OrderId = 7, ProductId = 9, Quantity = 3, Price = 49.99m },
+                    new OrderDetail { OrderId = 8, ProductId = 10, Quantity = 5, Price = 25.99m },
+                    new OrderDetail { OrderId = 9, ProductId = 11, Quantity = 2, Price = 15.99m },
+                    new OrderDetail { OrderId = 9, ProductId = 12, Quantity = 1, Price = 189.99m }
                 );
                 context.SaveChanges(); // Save OrderDetails after Orders and Products
             }
@@ -68,11 +68,11 @@ namespace ReportProvider.Data
             if (!context.Reviews.Any())
             {
                 context.Reviews.AddRange(
-                    new Review { ProductId = 1, UserId = 1, Comment = "Excellent laptop!", Rating = 5 },
-                    new Review { ProductId = 2, UserId = 2, Comment = "Great value for the price.", Rating = 4 },
-                    new Review { ProductId = 3, UserId = 3, Comment = "Good sound quality.", Rating = 4 },
-                    new Review { ProductId = 4, UserId = 4, Comment = "Decent keyboard.", Rating = 3 },
-                    new Review { ProductId = 5, UserId = 5, Comment = "Not the best mouse.", Rating = 2 }
+                    new Review { ProductId = 7, UserId = 6, Comment = "Excellent laptop!", Rating = 5 },
+                    new Review { ProductId = 8, UserId = 6, Comment = "Great value for the price.", Rating = 4 },
+                    new Review { ProductId = 10, UserId = 6, Comment = "Good sound quality.", Rating = 4 },
+                    new Review { ProductId = 10, UserId = 7, Comment = "Decent keyboard.", Rating = 3 },
+                    new Review { ProductId = 9, UserId = 10, Comment = "Not the best mouse.", Rating = 2 }
                 );
                 context.SaveChanges(); // Save Reviews after Users and Products
             }
@@ -81,12 +81,12 @@ namespace ReportProvider.Data
             if (!context.Inventory.Any())
             {
                 context.Inventory.AddRange(
-                    new Inventory { ProductId = 1, Quantity = 50 },
-                    new Inventory { ProductId = 2, Quantity = 100 },
-                    new Inventory { ProductId = 3, Quantity = 200 },
-                    new Inventory { ProductId = 4, Quantity = 150 },
-                    new Inventory { ProductId = 5, Quantity = 180 },
-                    new Inventory { ProductId = 6, Quantity = 75 }
+                    new Inventory { ProductId = 7, Quantity = 50 },
+                    new Inventory { ProductId = 8, Quantity = 100 },
+                    new Inventory { ProductId = 9, Quantity = 200 },
+                    new Inventory { ProductId = 10, Quantity = 150 },
+                    new Inventory { ProductId = 11, Quantity = 180 },
+                    new Inventory { ProductId = 12, Quantity = 75 }
                 );
                 context.SaveChanges(); // Save Inventory after Products
             }

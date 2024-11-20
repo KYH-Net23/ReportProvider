@@ -13,20 +13,18 @@ namespace ReportProvider.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetMostSoldProductsAsync(DateTime startDate, DateTime endDate)
+        public async Task<IEnumerable<Product>> GetMostSoldProductsAsync()
         {
             return await _context.OrderDetails
-                .Where(od => od.Order.OrderDate >= startDate && od.Order.OrderDate <= endDate)
                 .GroupBy(od => od.Product)
                 .OrderByDescending(g => g.Sum(od => od.Quantity))
                 .Select(g => g.Key)
                 .ToListAsync();
         }
 
-        public async Task<decimal> GetTotalRevenueAsync(DateTime startDate, DateTime endDate)
+        public async Task<decimal> GetTotalRevenueAsync()
         {
             return await _context.OrderDetails
-                .Where(od => od.Order.OrderDate >= startDate && od.Order.OrderDate <= endDate)
                 .SumAsync(od => od.Quantity * od.Price);
         }
 

@@ -15,16 +15,16 @@ namespace ReportProvider.Controllers
         }
 
         [HttpGet("most-sold-products")]
-        public async Task<IActionResult> GetMostSoldProducts(DateTime startDate, DateTime endDate)
+        public async Task<IActionResult> GetMostSoldProducts()
         {
-            var products = await _reportService.GetMostSoldProducts(startDate, endDate);
+            var products = await _reportService.GetMostSoldProducts();
             return Ok(products);
         }
 
         [HttpGet("total-revenue")]
-        public async Task<IActionResult> GetTotalRevenue(DateTime startDate, DateTime endDate)
+        public async Task<IActionResult> GetTotalRevenue()
         {
-            var revenue = await _reportService.GetTotalRevenue(startDate, endDate);
+            var revenue = await _reportService.GetTotalRevenue();
             return Ok(new { revenue });
         }
 
