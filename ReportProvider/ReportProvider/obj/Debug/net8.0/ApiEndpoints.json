@@ -21,6 +21,16 @@
   },
   {
     "ContainingType": "ReportProvider.Controllers.ReportController",
+    "Method": "GetInventory",
+    "RelativePath": "api/Report/inventory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportProvider.Controllers.ReportController",
     "Method": "GetLowStockProducts",
     "RelativePath": "api/Report/low-stock-products",
     "HttpMethod": "GET",

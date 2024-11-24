@@ -26,7 +26,7 @@ namespace ReportProvider.Controllers
         public async Task<IActionResult> GetTotalRevenue()
         {
             var revenue = await _reportService.GetTotalRevenue();
-            return Ok(new { revenue });
+            return Ok(new { revenue }); 
         }
 
         [HttpGet("low-stock-products")]
@@ -40,6 +40,12 @@ namespace ReportProvider.Controllers
         {
             var statistics = await _reportService.GetCustomerPurchaseStatisticsAsync();
             return Ok(statistics);
+        }
+        [HttpGet("inventory")]
+        public async Task<IActionResult> GetInventory()
+        {
+            var inventory = await _reportService.GetInventory();
+            return Ok(inventory);
         }
     }
 }

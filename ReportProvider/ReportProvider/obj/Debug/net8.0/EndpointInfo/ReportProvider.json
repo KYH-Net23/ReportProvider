@@ -78,6 +78,18 @@
           }
         }
       }
+    },
+    "/api/Report/inventory": {
+      "get": {
+        "tags": [
+          "Report"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

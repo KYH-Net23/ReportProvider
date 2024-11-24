@@ -54,5 +54,10 @@ namespace ReportProvider.Services
 
             return statistics;
         }
+        public async Task<IEnumerable<Inventory>> GetInventoryAsync()
+        {
+            return await _context.Inventory
+                .ToListAsync();
+        }
     }
 }

@@ -26,6 +26,10 @@ namespace ReportProvider.Services
         {
             return _reportRepository.GetLowStockProductsAsync();
         }
+        public Task<IEnumerable<Inventory>> GetInventory()
+        {
+            return _reportRepository.GetInventoryAsync();
+        }
         public Task<List<CustomerPurchaseStatisticsDto>> GetCustomerPurchaseStatisticsAsync()
         {
             return _reportRepository.GetCustomerPurchaseStatisticsAsync();
